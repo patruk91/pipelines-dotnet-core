@@ -37,6 +37,7 @@ steps:
       arguments: 'install -g dotnetsay'
       
   - task: DotNetCoreCLI@2
+    displayName: tests
     inputs:
       command: test
       projects: '**/*Tests/*.csproj'
