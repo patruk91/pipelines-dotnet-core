@@ -53,7 +53,7 @@ steps:
   - script: dotnet build --configuration $(buildConfiguration)
     displayName: 'dotnet build $(buildConfiguration)'
   
-  -script: dotnet test <test-project> -- logger trx
+  - script: dotnet test <test-project> -- logger trx
   - task: PublishTestResults@2
     condition: succededOrFailed()
     inputs:
