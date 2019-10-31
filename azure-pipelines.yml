@@ -13,6 +13,12 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+  - task: NuGetCommand@2
+    inputs:
+      command: 'restore'
+      restoreSolution: '**/*.sln'
+      feedsToUse: 'select'
+
   - task: UseDotNet@2
     inputs:
       version: '3.0.x'
