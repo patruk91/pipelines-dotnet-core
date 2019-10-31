@@ -19,7 +19,6 @@ steps:
       projects: '**/*.csproj'
       feedsToUse: config
       nugetConfigPath: NuGet.config
-      externalFeedCredentials: <Name of NuGet service connection>
 
   - task: UseDotNet@2
     inputs:
