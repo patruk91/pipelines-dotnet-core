@@ -30,11 +30,11 @@ steps:
       packageType: runtime
     
   - task: DotNetCoreCLI@2
-      displayName: 'Install dotnetsay'
-      inputs:
-        command: custom
-        custom: tool
-        arguments: 'install -g dotnetsay'
+    displayName: 'Install dotnetsay'
+    inputs:
+      command: custom
+      custom: tool
+      arguments: 'install -g dotnetsay'
         
 #   - task: DotNetCoreCLI@2 # same at dotnet build
 #     displayName: Build
