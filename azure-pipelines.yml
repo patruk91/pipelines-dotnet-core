@@ -55,7 +55,7 @@ steps:
   
   - script: dotnet test <test-project> -- logger trx
   - task: PublishTestResults@2
-    condition: succededOrFailed()
+    condition: succeededOrFailed()
     inputs:
       testRunner: VSTest
       testResultFiles: '**/*.trx'
