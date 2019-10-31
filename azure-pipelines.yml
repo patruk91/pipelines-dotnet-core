@@ -21,10 +21,10 @@ steps:
 #       nugetConfigPath: NuGet.config
 
   - task: NuGetCommand@2
-  inputs:
-    command: 'restore'
-    restoreSolution: '**/*.sln'
-    feedsToUse: 'select'
+    inputs:
+      command: 'restore'
+      restoreSolution: '**/*.sln'
+      feedsToUse: 'select'
 
   - task: UseDotNet@2
     inputs:
