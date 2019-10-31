@@ -54,8 +54,8 @@ steps:
     displayName: 'dotnet build $(buildConfiguration)'
   
   -script: dotnet test <test-project> -- logger trx
-    - task: PublishTestResults@2
-      condition: succededOrFailed()
-      inputs:
-        testRunner: VSTest
-        testResultFiles: '**/*.trx'
+  - task: PublishTestResults@2
+    condition: succededOrFailed()
+    inputs:
+      testRunner: VSTest
+      testResultFiles: '**/*.trx'
