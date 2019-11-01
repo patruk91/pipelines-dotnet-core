@@ -52,3 +52,10 @@ steps:
    
   - script: dotnet build --configuration $(buildConfiguration)
     displayName: 'dotnet build $(buildConfiguration)'
+  
+  - task: DotNetCoreCLI@2
+    displayName: test with code coverage
+    inputs:
+      command: test
+      projects: '**/*Tests/*.csproj'
+      arguments: '--configuration $(buildConfiguration) --collect "Code coverage"'
